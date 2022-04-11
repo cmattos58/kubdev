@@ -2,16 +2,20 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress 
 metadata:
   name: api-ingress
+  namespace: suporte
   annotations:
+    kubernetes.io/ingress.class: nginx
+    #nginx.ingress.kubernetes.io/proxy-body-size: "0"
     nginx.ingress.kubernetes.io/rewrite-target: /
+    #nginx.ingress.kubernetes.io/ssl-redirect: "false"
 spec:
   rules:
-    - host: cmattos.net
+    - host: srv02.tce.ma.gov.br
       http:
         paths:
-        - path: "/"
-          pathType: Prefix
-          backend:
+        - pathType: Prefix
+          path: /
+          backend: 
             service:
               name: api-service
               port: 

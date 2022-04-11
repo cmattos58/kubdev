@@ -28,5 +28,5 @@ spec:
           - name: Mongo__Port
             value: "27017"
           - name: Mongo__Host
-            #value: "mongo-service"
-            value: "10.42.0.6"
+            value: "mongo-service"
+            #value: "10.110.242.73"
