@@ -2,7 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mongodb-deployment
-  namespace: suporte
+  #namespace: suporte
+  namespace: database
 spec:
   selector:
     matchLabels:
